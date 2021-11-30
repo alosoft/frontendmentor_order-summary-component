@@ -1,0 +1,147 @@
+:root {
+    --pale-blue: hsl(225, 100%, 94%);
+    --light-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --bright-active-blue: hsla(245, 75%, 52%, 0.666);
+    --dark-blue: hsl(223, 47%, 23%);
+    --mobile-size: 375px;
+    --desktop-size: 1440px;
+    --font-family: 'Red Hat Display', sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    font-size: 1rem;
+    background: url('images/pattern-background-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media only screen and (max-width: 375px){
+    body {
+        background: url('images/pattern-background-mobile.svg');
+    }
+}
+
+h1, h2, h3, h4, p {
+    margin-top: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.container {
+    margin: 2rem 1rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 2px 19px var(--desaturated-blue);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    overflow: hidden;
+    max-width: var(--mobile-size);
+    margin: 2rem auto;
+}
+
+.body {
+    padding: 1rem;
+}
+
+
+
+.body__order, .body__description {
+    text-align: center;
+}
+
+.body__order {
+    font-weight: 900;
+    text-align: center;
+}
+
+.body__description {
+    color: var(--desaturated-blue);
+}
+
+.body__price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-pale-blue);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.body__price img {
+    width: 50px;
+    height: 50px;
+}
+
+.body__price a {
+    font-family: var(--font-family);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.body__price-details {
+    flex: 2;
+    margin-left: 0.4rem;
+}
+
+.body__price-details__title {
+    font-weight: 900;
+    margin: 0;
+}
+
+.body__price-details__amount {
+    color: var(--desaturated-blue);
+    margin: 0;
+    margin: 0;
+}
+
+.button {
+    font-family: var(--font-family);
+    font-weight: 900;
+    font-size: 0.9rem;
+    display: block;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    border: none;
+    outline: none;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.body__proceed:hover {
+    background-color: var(--bright-active-blue);
+}
+
+.body__proceed {
+    border-radius: 1rem;
+    color: #ffffff;
+    background-color: var(--bright-blue);
+    box-shadow: 0 20px 20px 2px var(--pale-blue)
+}
+
+.body__cancel {
+    background: none;
+    color: var(--desaturated-blue);
+}
